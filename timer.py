@@ -86,3 +86,7 @@ class Timer(object):
         if printing:
             self.print_time(t, idx)
         return t
+
+    def print_timers(self, sep=" "):
+        s = [k + sep + str(v.time) for k, v in sorted(self.timers.items())]
+        print "\n".join(s)
